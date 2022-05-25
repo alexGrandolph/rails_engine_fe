@@ -6,11 +6,15 @@ class MerchantsController < ApplicationController
     results = JSON.parse(response.body, symbolize_names: true)[:data]
     @merchants = []
     results.each do |merchant|
-      # binding.pry
       @merchants << merchant
     end
     @merchants
   end
+
+  def show
+    
+  end
+  
   
 
 

@@ -17,18 +17,18 @@ RSpec.describe "Merchants Index Page" do
 
     it 'Each merchants name is a link to their show page' do
       visit '/merchants'
-      save_and_open_page
       within "#merchant_id-96" do
         expect(page).to have_link("Swaniawski-Cremin")
       end
-
+      
       within "#merchant_id-97" do
         expect(page).to have_link("Rice, Jerde and White")
       end
       within "#merchant_id-60" do
         click_link "Smitham LLC"
       end
-      expect(current_path).to eq("/merchants/42")
+      save_and_open_page
+      expect(current_path).to eq("/merchants/60")
 
     end 
 
