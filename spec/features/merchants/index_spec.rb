@@ -27,9 +27,7 @@ RSpec.describe "Merchants Index Page" do
       within "#merchant_id-60" do
         click_link "Smitham LLC"
       end
-      save_and_open_page
       expect(current_path).to eq("/merchants/60")
-
     end 
 
   end 
