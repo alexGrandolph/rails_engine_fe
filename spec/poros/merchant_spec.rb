@@ -15,4 +15,21 @@ RSpec.describe Merchant do
     new_merchant = Merchant.new(data)
     expect(new_merchant).to be_a Merchant
   end 
+
+  it 'has readable attributes' do
+    data = {
+            "data": {
+                      "id": "42",
+                      "type": "merchant",
+            "attributes": {
+                      "name": "Glover Inc"
+                          }
+                    }
+            }
+    new_merchant = Merchant.new(data)
+    expect(new_merchant.id).to eq("42")
+    expect(new_merchant.name).to eq("Glover Inc")
+
+
+  end
 end 
