@@ -58,7 +58,7 @@ end
 group :test do
   gem 'launchy'
   gem 'webmock'
-  gem 'vcr'
+  # gem 'vcr'
 
 end
 
