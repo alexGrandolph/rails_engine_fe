@@ -6,7 +6,7 @@ RSpec.describe "Merchant Show Page" do
 
     it 'Has a list of all the items that merchant sells' do
       visit "/merchants/99"
-      save_and_open_page
+      # save_and_open_page
       expect(page).to have_content("Fahey-Stiedemann")
       expect(page).to have_content("Items:")
       expect(page).to have_content("Item Excepturi Rem")
