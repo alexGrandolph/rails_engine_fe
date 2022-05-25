@@ -1,1 +1,18 @@
-<h1>Merchant Name Here</h1>
+<br>
+<br>
+
+<center>
+<h1><%= @merchant[:attributes][:name] %></h1>
+</center>
+
+<br>
+<br>
+<h3>Items:</h3>
+<br>
+<% @items.each do |item| %>
+
+  <%= item[:attributes][:name] %><br>
+
+<% end %>
+
+
