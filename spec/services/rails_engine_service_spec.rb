@@ -10,9 +10,6 @@ RSpec.describe RailsEngineService do
     expect(search[0]).to have_key(:id)
     expect(search[0]).to have_key(:type)
     expect(search[0][:attributes]).to have_key(:name)
- 
-
-
   end
 
 
