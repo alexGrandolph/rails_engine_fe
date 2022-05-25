@@ -6,7 +6,8 @@ class MerchantsController < ApplicationController
     results = JSON.parse(response.body, symbolize_names: true)[:data]
     @merchants = []
     results.each do |merchant|
-      @merchants << merchant[:attributes][:name]
+      # binding.pry
+      @merchants << merchant
     end
     @merchants
   end
