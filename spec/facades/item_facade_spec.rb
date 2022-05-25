@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe MerchantItemFacade do
+RSpec.describe MerchantItemsFacade do
 
   it 'returns a merchants item object' do
-    items = MerchantItemFacade.all_items
+    items = MerchantItemsFacade.all_items(99)
 
     expect(items).to be_an Array
     expect(items).to be_all Item
