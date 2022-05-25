@@ -15,11 +15,7 @@ class MerchantsController < ApplicationController
       @items << item
     end 
     @items
-    #get merchant
-    conn2 = Faraday.new(url: "http://localhost:3000")
-    response2 = conn2.get("/api/v1/merchants/#{merch_id}")
-    result = JSON.parse(response2.body, symbolize_names: true)[:data]
-    @merchant = Merchant.new(result)
+    @merchant = MerchantFacade.one_merchant(merch_id)
   end
   
   
