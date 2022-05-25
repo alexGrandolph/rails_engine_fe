@@ -6,7 +6,7 @@ RSpec.describe "Merchants Index Page" do
 
     it 'Has a list of each merchants by name' do
       visit '/merchants'
-
+      save_and_open_page
       expect(page).to have_content('Merchants')
       expect(page).to have_content('Schroeder-Jerde')
       expect(page).to have_content('Willms and Sons')
