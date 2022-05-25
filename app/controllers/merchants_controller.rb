@@ -12,7 +12,7 @@ class MerchantsController < ApplicationController
     results = JSON.parse(response.body, symbolize_names: true)[:data]
     @items = []
     results.each do |item|
-      @items << item
+      @items << Item.new(item)
     end 
     @items
     @merchant = MerchantFacade.one_merchant(merch_id)
