@@ -6,7 +6,7 @@ class MerchantsController < ApplicationController
     results = JSON.parse(response.body, symbolize_names: true)[:data]
     @merchants = []
     results.each do |merchant|
-      @merchants << merchant
+      @merchants << Merchant.new(merchant)
     end
     @merchants
   end

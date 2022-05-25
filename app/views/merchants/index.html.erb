@@ -9,8 +9,8 @@
 <br>
 <br>
 <% @merchants.each do |merchant| %>
-<section id="merchant_id-<%= merchant[:id] %>">
+<section id="merchant_id-<%= merchant.id %>">
  
-  <%= link_to "#{merchant[:attributes][:name]}", "/merchants/#{merchant[:id]}" %><br>
+  <%= link_to "#{merchant.name}", "/merchants/#{merchant.id}" %><br>
 </section>
 <% end %>
