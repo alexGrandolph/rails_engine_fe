@@ -19,9 +19,13 @@ RSpec.describe RailsEngineService do
     expect(search).to have_key(:id)
     expect(search).to have_key(:type)
     expect(search[:attributes]).to have_key(:name)
-
-
   end
+
+  it 'returns a merchants items JSON data' do
+    search = RailsEngineService.merchant_items('42')
+
+    expect(search).to be_an Array
+  end 
 
 
 end 
