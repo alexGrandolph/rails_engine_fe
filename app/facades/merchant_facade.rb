@@ -10,9 +10,7 @@ class MerchantFacade
   end 
 
   def self.one_merchant(merch_id)
-    conn = Faraday.new(url: "http://localhost:3000")
-    response = conn.get("/api/v1/merchants/#{merch_id}")
-    result = JSON.parse(response.body, symbolize_names: true)[:data]
+    result = RailsEngineService.get_one_merchant(merch_id)
     merchant = Merchant.new(result)
   end
   

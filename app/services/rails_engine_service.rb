@@ -6,4 +6,10 @@ class RailsEngineService
     results = JSON.parse(response.body, symbolize_names: true)[:data]
   end
 
+  def self.get_one_merchant(id)
+    conn = Faraday.new(url: "http://localhost:3000")
+    response = conn.get("/api/v1/merchants/#{id}")
+    result = JSON.parse(response.body, symbolize_names: true)[:data]
+  end
+
 end
